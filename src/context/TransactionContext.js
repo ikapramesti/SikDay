@@ -200,7 +200,7 @@ export const TransactionProvider = ({ children }) => {
     notifs.push({
       id: "notif-financial-tip",
       type: "success",
-      title: "💡 Tips Finansial DompetKu",
+      title: "💡 Tips Finansial SikDay",
       message:
         "Terapkan formula 50/30/20: 50% kebutuhan pokok, 30% keinginan pribadi, dan 20% tabungan atau investasi rutin.",
       date: "Minggu ini",
