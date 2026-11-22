@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DompetKu",
-    "slug": "dompetku",
+    "name": "SikDay",
+    "slug": "SikDay",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#450920"
       },
-      "package": "com.dompetku.app"
+      "package": "com.SikDay.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
