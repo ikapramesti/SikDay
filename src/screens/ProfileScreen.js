@@ -60,7 +60,7 @@ export const ProfileScreen = ({ navigation }) => {
       name: nameInput.trim(),
       email: emailInput.trim(),
       phone: phoneInput.trim() || "-",
-      occupation: occupationInput.trim() || "Pengguna DompetKu",
+      occupation: occupationInput.trim() || "Pengguna SikDay",
     });
 
     setIsEditModalVisible(false);
