@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useNavigation } from '@react-navigation/native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../constants/colors';
@@ -15,6 +16,7 @@ const EmptyAddPlaceholder = () => null;
 
 export const BottomTabNavigator = () => {
   const rootNavigation = useNavigation();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tab.Navigator
@@ -24,11 +26,16 @@ export const BottomTabNavigator = () => {
         tabBarShowLabel: true,
         tabBarActiveTintColor: colors.peachCream,
         tabBarInactiveTintColor: 'rgba(255, 165, 171, 0.65)',
-        tabBarStyle: styles.tabBar,
+        tabBarStyle: [
+          styles.tabBar,
+          {
+            height: 70 + insets.bottom,
+            paddingBottom: 10 + insets.bottom,
+          },
+        ],
         tabBarLabelStyle: styles.tabBarLabel,
       }}
     >
-      {/* Tab 1: Transaksi */}
       <Tab.Screen
         name="TransactionsTab"
         component={TransactionsScreen}
@@ -44,7 +51,6 @@ export const BottomTabNavigator = () => {
         }}
       />
 
-      {/* Tab 2: Ringkasan & Analisis */}
       <Tab.Screen
         name="SummaryTab"
         component={SummaryScreen}
@@ -60,7 +66,6 @@ export const BottomTabNavigator = () => {
         }}
       />
 
-      {/* Center Action: Tombol Lingkaran '+' */}
       <Tab.Screen
         name="AddPlaceholderTab"
         component={EmptyAddPlaceholder}
@@ -80,7 +85,6 @@ export const BottomTabNavigator = () => {
         }}
       />
 
-      {/* Tab 3: Profil & Pengaturan */}
       <Tab.Screen
         name="ProfileTab"
         component={ProfileScreen}
@@ -101,7 +105,7 @@ export const BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.bottomBarBg, // #450920
+    backgroundColor: colors.bottomBarBg, 
     borderTopWidth: 0,
     elevation: 16,
     height: 70,

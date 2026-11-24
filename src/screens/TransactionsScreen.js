@@ -4,10 +4,10 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../constants/colors';
@@ -16,6 +16,7 @@ import TransactionItem from '../components/TransactionItem';
 import { useTransactions } from '../context/TransactionContext';
 
 export const TransactionsScreen = ({ navigation }) => {
+  const insets = useSafeAreaInsets();
   const {
     transactions,
     balance,
@@ -44,12 +45,15 @@ export const TransactionsScreen = ({ navigation }) => {
   const userFirstName = (userProfile.name || 'Pengguna').split(' ')[0];
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <View style={[styles.safeArea, { paddingTop: insets.top }]}>
       <StatusBar barStyle="light-content" backgroundColor={colors.headerBg} />
 
       <ScrollView
         style={styles.container}
-        contentContainerStyle={styles.contentContainer}
+        contentContainerStyle={[
+          styles.contentContainer,
+          { paddingBottom: insets.bottom + 120 },
+        ]}
         showsVerticalScrollIndicator={false}
       >
         <Header
@@ -252,7 +256,7 @@ export const TransactionsScreen = ({ navigation }) => {
           )}
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
