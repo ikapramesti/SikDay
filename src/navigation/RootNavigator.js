@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 export const RootNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="MainTabs"
+      initialRouteName="Onboarding"
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right',
