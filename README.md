@@ -45,7 +45,7 @@ Proyek ini dirancang secara modular, responsif, stabil, dan ramah pengguna untuk
 
 ---
 
-## 📂 2. Struktur Folder Proyek
+## 2. Struktur Folder Proyek
 
 Proyek disusun dengan arsitektur modular dan rapi sesuai *best practices* pengembangan React Native:
 
@@ -91,7 +91,7 @@ SikDay/ (SikDay/)
 
 ---
 
-## 🧭 3. Daftar 7 Screen Aktif & Arsitektur Navigasi
+## 3. Daftar 7 Screen Aktif & Arsitektur Navigasi
 
 Aplikasi mengintegrasikan kombinasi **Bottom Tab Navigation** (menu navigasi di bawah layar) dan **Stack Navigation** (layar tumpukan bertingkat dan modal formulir).
 
@@ -135,7 +135,7 @@ RootStackNavigator (Stack Navigation)
 
 ---
 
-## 🎨 4. Palet Warna Resmi (Color Palette)
+## 4. Palet Warna Resmi (Color Palette)
 
 Aplikasi mengadaptasi palet warna khusus sesuai spesifikasi desain antarmuka *mobile finance app* yang harmonis dan memiliki rasio kontras teks tinggi:
 
@@ -154,7 +154,7 @@ File konfigurasi warna terpusat di: [`src/constants/colors.js`](file:///Users/ik
 
 ---
 
-## 🛠️ 5. Daftar Library & Sumber Aset Legal
+## 5. Daftar Library & Sumber Aset Legal
 
 Seluruh dependensi dan aset visual yang digunakan pada aplikasi SikDay merupakan sumber **100% legal, *open-source*, dan bebas lisensi bermasalah**:
 
@@ -172,7 +172,7 @@ Seluruh dependensi dan aset visual yang digunakan pada aplikasi SikDay merupakan
 
 ---
 
-## 🚀 6. Panduan Menjalankan Aplikasi
+## 6. Panduan Menjalankan Aplikasi
 
 ### A. Prasyarat Sistem
 - **Node.js** versi 18.x atau 20+ ke atas telah terpasang.
