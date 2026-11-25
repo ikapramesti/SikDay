@@ -54,7 +54,7 @@ export const OnboardingScreen = ({ navigation }) => {
 
         {/* Content Section */}
         <View style={styles.bottomSheet}>
-          <Text style={styles.title}>Tentukan Tujuanmu</Text>
+          <Text style={styles.title}>SikDay</Text>
           <Text style={styles.description}>
             Catat pemasukan dan pengeluaran harianmu dengan praktis, kelola pos
             tabungan, dan raih kebebasan finansial bersama SikDay.
